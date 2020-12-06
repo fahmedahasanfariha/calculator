@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's a Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator_section">
+        <div class="cal_content">
+            <div class="calculator_head">
+                <h2>Please Calculate</h2>
+            </div>
+        <!-- start of plus section -->
+        <input type="number" id="plus_1"><span>+</span><input type="number" id="plus_2">
+        <button onclick="plus()">Result</button>
+        <br>
+        <br>
+         <!-- End of plus section -->
+         <!-- start of min section -->
+        <input type="number" id="min_1"><span>-</span><input type="number" id="min_2">
+        <button onclick="min()">Result</button>
+        <br>
+        <br>
+         <!-- End of min section -->
+        <!-- start of mul section -->
+        <input type="number" id="mul_1"><span>*</span><input type="number" id="mul_2">
+        <button onclick="mul()">Result</button>
+        <br>
+        <br>
+         <!-- End of mul section -->
+        <!-- start of div section -->
+        <input type="number" id="div_1"><span>/</span><input type="number" id="div_2">
+        <button onclick="div()">Result</button>
+        <br>
+        <br>
+         <!-- End of div section -->
+         <!-- start of mod section -->
+        <input type="number" id="mod_1"><span>%</span><input type="number" id="mod_2">
+        <button onclick="mod()">Result</button>
+        <br>
+        <br>
+         <!-- End of mod section -->
+        <button class="s_btn">RESULT:</button><span id="output"></span>
+
+        <script>
+            function plus(){
+                var m = document.getElementById("plus_1").value;
+                var n = document.getElementById("plus_2").value;
+                var z = parseInt(m)+parseInt(n);
+
+            document.getElementById("output").innerHTML=z;
+            }
+            function min(){
+                var m = document.getElementById("min_1").value;
+                var n = document.getElementById("min_2").value;
+                var z = parseInt(m)-parseInt(n);
+
+            document.getElementById("output").innerHTML=z;
+            }
+            function mul(){
+                var m = document.getElementById("mul_1").value;
+                var n = document.getElementById("mul_2").value;
+                var z = parseInt(m)*parseInt(n);
+
+            document.getElementById("output").innerHTML=z;
+            }
+            function div(){
+                var m = document.getElementById("div_1").value;
+                var n = document.getElementById("div_2").value;
+                var z = parseInt(m)/parseInt(n);
+
+            document.getElementById("output").innerHTML=z;
+            }
+            function mod(){
+                var m = document.getElementById("mod_1").value;
+                var n = document.getElementById("mod_2").value;
+                var z = parseInt(m)%parseInt(n);
+
+            document.getElementById("output").innerHTML=z;
+            }
+        </script>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
